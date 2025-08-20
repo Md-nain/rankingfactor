@@ -245,11 +245,11 @@ const testimonialSlider = new Swiper('.testimonial-slider .content-holder', {
   speed: 4000,
   spaceBetween: 0,
   initialSlide: 1,
-  // autoplay: {
-  //   delay: 6000,
-  //   disableOnInteraction: false,
-  //   pauseOnMouseEnter: true,
-  // },
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
   pagination: {
     el: '.testimonial-slider .swiper-pagination',
     clickable: true,
