@@ -10,6 +10,7 @@
   --clr-overlay-bg: #141414;
   --clr-link: #e5e3dc;
   --clr-white: #fff;
+  --clr-blue: #3B5FDF;
   --font-bebas: "Bebas Neue", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-poppins: "Poppins", sans-serif;
@@ -24,7 +25,7 @@
     @apply leading-[90%] text-white  text-[6.5rem] md:text-[8.125rem]
   }
   h3{
-    @apply text-white 
+    @apply text-white text-[3rem] md:text-[3.43rem]  leading-[100%]
   }
   h4{
     @apply font-medium text-white
@@ -73,7 +74,7 @@
     @apply font-bold text-[40px] md:text-[110px] lg:text-[150px] text-[#142041]
   }
   .cta-link{
-    @apply  text-base md:text-xl text-white font-medium underline hover:text-[#3b82f6] decoration-[#3b82f6] -outline-offset-4
+    @apply  text-xl md:text-xl text-white font-medium underline hover:text-[#3b82f6] decoration-[#3b82f6] -outline-offset-4
   }
   .intro-section{
     @apply  py-[1rem] md:py-[3rem] px-[0.25rem] md:px-[1rem]
@@ -88,7 +89,7 @@
     @apply border-r border-b border-[0.06rem] border-white px-3 py-8 md:py-10 flex items-center justify-center cursor-pointer transition-colors;
   }
   .industry-cell span {
-    @apply text-white font-medium text-base md:text-[1.375rem] leading-[121%] text-center;
+    @apply text-white font-medium text-xl md:text-[1.375rem] leading-[121%] text-center;
   }
   
   .vertical-heading h2 {
@@ -126,6 +127,15 @@
   .tab-item span{
     font-family: var(--font-bebas);
     @apply  uppercase text-white text-[1.5rem] md:text-[2.62rem] leading-[90%]
+  }
+  .bg-image{
+    @apply absolute w-full h-full left-0 top-0
+  }
+  .bg-image img{
+    @apply w-full h-full object-cover object-center
+  }
+  .secondary-banner h1{
+    @apply md:text-[13.12rem]
   }
 }
 
@@ -679,6 +689,195 @@ svg path {
   .contact-info a{
     font-family: var(--font-bebas);
   }
+  .secondary-banner h1{
+    position: relative;
+  }
+  .secondary-banner h1 i:before{
+    content: '';
+    color: var(--clr-blue);
+    width: 12.25rem;
+    height: 13.8rem;
+    background-image: url('../assets/images/icons/hash-icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -3.75rem;
+    top: -3.2rem;
+  }
+  .service-card{
+    text-transform: uppercase;
+  }
+  
+  .service-card h3{
+    line-height: 0.9rem;
+    padding-right: 2rem;
+  }
+  .service-card p{
+    line-height: 1.2;
+  }
+  .service-card .card-content{
+    height: 100%;
+  }
+  .service-card .card-content h3,.service-card .card-content p{
+    z-index: 1;
+    position: relative;
+  }
+  .service-card .card-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--clr-blue);
+    z-index: 0;
+    transition: width 1s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+  }
+  .service-card .card-content:hover:before{
+    width: 100%;
+  }
+  .service-card .feature-image{
+    opacity: 0;
+  }
+  .service-card .card-content:hover .feature-image{
+    opacity: 1;
+    transform: rotate(-8deg);
+    transition: all 1s cubic-bezier(.4,0,.2,1);
+  }
+  .testimonials-block .icon-bar:before,.testimonials-block .icon-bar:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    background-color: #142041;
+  }
+  .testimonials-block .icon-bar img{
+    width: 17.3rem;
+    height: auto;
+  }
+  .testimonials-block .icon-bar:before{
+    top: -3.9rem;
+    border-top-right-radius: 3.4rem;
+    border-top-left-radius: 3.4rem;
+  }
+  .testimonials-block .icon-bar:after{
+    bottom: -3.9rem;
+    border-bottom-right-radius: 3.4rem;
+    border-bottom-left-radius: 3.4rem;
+  }
+  .testimonial-slider .meta-info{
+    padding-bottom: 1.4rem;
+    padding-top: 0.3rem;
+  }
+  .testimonial-slider .meta-info span{
+    font-family: var(--font-inter);
+  }
+  .testimonial-slider .swiper-pagination{
+      bottom: 2rem !important;
+      padding-left: 3.7rem;
+      width: auto !important;
+  }
+  .testimonial-slider .swiper-pagination .swiper-pagination-bullet{
+      width: 1.62rem !important;
+      height: 0.31rem !important;
+      background: #D9D9D9 !important;
+      opacity: 1 !important;
+      border-radius: 0.16rem !important;
+      margin: 0 !important;
+      margin-right: 0.3rem !important;
+  }
+  .testimonial-slider .swiper-pagination .swiper-pagination-bullet-active{
+      background: var(--clr-blue) !important;
+  }
+  .testimonial-slider .content-holder:after{
+    content: '';
+    width: 6.68rem;
+    height: 5.5rem;
+    background-image: url('../assets/images/icons/quote-blue-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 1.8rem;
+    z-index: 0;
+    position: absolute;
+    z-index: 1;
+  }
+  .team-listing .member-item .member-content{
+    border-bottom: 0.07rem solid var(--clr-blue)
+  }
+  .team-listing .member-item .overlay-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(8, 24, 67,0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 3rem 2.3rem;
+    border-bottom: 0.1rem solid rgba(0,0,0,0);
+    transition: all 1s cubic-bezier(.4,0,.2,1);
+    backdrop-filter: blur(1.7px);
+    -webkit-backdrop-filter: blur(1.7px); 
+  }
+  .team-listing .member-item .member-content:hover .overlay-content,.team-listing .member-item .member-content:focus .overlay-content{
+    border-bottom-color: var(--color-white);
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .member-item .feature-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .member-item .overlay-content .blur-btn{
+    background-color: rgba(59, 95, 223, 0.1);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px); 
+    padding: 0.74rem 1.5rem;
+    border: 0.07rem solid var(--clr-blue);
+    color: var(--color-white);
+    font-size: 0.875rem;
+    min-width: 13.3rem;
+    transition: all 0.3s ease 0s;
+  }
+  .member-item .overlay-content .blur-btn:hover{
+    background-color: rgba(59, 95, 223, 0.3);
+  }
+  .member-item .overlay-content h3{
+    position: relative;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+    width: 100%;
+    line-height: 0.9rem;
+    font-size: 4.37rem;
+  }
+  .member-item .overlay-content h3:before,.member-item .overlay-content h3:after{
+    content: '';
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    height: 0.4rem;
+    width: 11.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .member-item .overlay-content h3:before{
+    left: 0;
+    background-image: url('../assets/images/team/heading-left-line.svg');
+  }
+  .member-item .overlay-content h3:after{
+    right: 0;
+    background-image: url('../assets/images/team/heading-right-line.svg');
+  }
   @media(max-width: 1401px){
     html{
       font-size: 15.5556px;
@@ -734,12 +933,21 @@ svg path {
       font-size: 8.9px;
     }
     body{
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
   @media(max-width: 767px){
     html{
       font-size: 20px;
+    }
+    body{
+      font-size: 1.2rem;
+    }
+    .btn{
+      font-size: 1.25rem !important;
+    }
+    .member-item .overlay-content .blur-btn{
+      font-size: 1.25rem;
     }
     .heading-accent.left-aligned h2 em:first-of-type {
       padding: 2.2rem 2rem 1.6rem;
@@ -760,6 +968,36 @@ svg path {
     }
     header{
       z-index: 999;
+    }
+    .secondary-banner h1 i:before {
+      width: 5.25rem;
+      height: 6.8rem;
+      left: -1.75rem;
+      top: -1.2rem;
+    }
+    .secondary-banner.text-center h1{
+      display: inline-block;
+    }
+    .service-card .card-content .feature-image{
+      opacity: 1;
+      right: 2rem;
+      transform: rotate(-8deg);
+      transition: all 1s cubic-bezier(.4,0,.2,1);
+    }
+    .team-listing .member-item .overlay-content{
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+    }
+    .team-listing .member-item .overlay-content h3{
+      margin-bottom: 1.5rem;
+    }
+     .team-listing .member-item .overlay-content p{
+      margin-bottom: 1.5rem;
+    }
+    .upper-text span, .lower-text span {
+      font-size: 3.8rem !important
     }
   }
   @media(max-width: 700px){
@@ -808,4 +1046,9 @@ svg path {
       font-size: 9.77836px;
     }
   }
+}
+.container{
+  max-width: 82.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

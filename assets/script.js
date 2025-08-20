@@ -151,50 +151,7 @@ function revealMenuItems() {
 
  });
 
-//Local Seo Service--
-  const imagePanels = document.querySelectorAll('.image-panel');
-  const textContents = document.querySelectorAll('.text-content');
-  let currentPanel = 1;
 
-  // Show initial content
-  showTextContent(1);
-
-  function showTextContent(panelNumber) {
-    textContents.forEach(content => {
-      content.classList.remove('active');
-    });
-    const activeContent = document.querySelector(`.text-content[data-panel="${panelNumber}"]`);
-    if (activeContent) {
-      activeContent.classList.add('active');
-    }
-  }
-
-  function expandPanel(panel) {
-    imagePanels.forEach(p => p.classList.remove('expanded'));
-    panel.classList.add('expanded');
-    const panelNumber = panel.getAttribute('data-panel');
-    showTextContent(panelNumber);
-    currentPanel = parseInt(panelNumber);
-  }
-
-  function resetPanels() {
-    imagePanels.forEach(panel => {
-      panel.classList.remove('expanded');
-    });
-  }
-
-  imagePanels.forEach(panel => {
-    panel.addEventListener('mouseenter', () => {
-      expandPanel(panel);
-    });
-  });
-
-  document.querySelector('.images-container').addEventListener('mouseleave', () => {
-    setTimeout(() => {
-      resetPanels();
-      showTextContent(1);
-    }, 100);
-  });
 
 
 //question --------
@@ -279,6 +236,23 @@ const reversegalleryslider = new Swiper('.gallery-slider.reverse-ticker .content
     767: {
       slidesPerView: 4,
     },
+  },
+});
+
+const testimonialSlider = new Swiper('.testimonial-slider .content-holder', {
+  slidesPerView: 1,
+  loop: true, 
+  speed: 4000,
+  spaceBetween: 0,
+  initialSlide: 1,
+  // autoplay: {
+  //   delay: 6000,
+  //   disableOnInteraction: false,
+  //   pauseOnMouseEnter: true,
+  // },
+  pagination: {
+    el: '.testimonial-slider .swiper-pagination',
+    clickable: true,
   },
 });
 
