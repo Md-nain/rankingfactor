@@ -878,6 +878,9 @@ svg path {
     right: 0;
     background-image: url('../assets/images/team/heading-right-line.svg');
   }
+  .hero-image img{
+    width: 100%;
+  }
   @media(max-width: 1401px){
     html{
       font-size: 15.5556px;
