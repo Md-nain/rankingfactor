@@ -263,3 +263,162 @@ window.onload = function () {
     });
   }, 0);
 };
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const heading = item.querySelector(".heading");
+
+    heading.addEventListener("click", () => {
+      // close all others
+      faqItems.forEach(sibling => {
+        if (sibling !== item) {
+          sibling.classList.remove("in");
+          const content = sibling.querySelector(".faq-content");
+          content.style.maxHeight = null; // collapse
+        }
+      });
+
+      // toggle current
+      item.classList.toggle("in");
+      const content = item.querySelector(".faq-content");
+
+      if (item.classList.contains("in")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+});
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const tocBlock = document.querySelector(".toc-block");
+//   const tocHeader = tocBlock?.querySelector("h4");
+//   const aside = document.querySelector(".blog-aside-content");
+//   const mainContent = document.querySelector(".blog-main-content");
+
+  
+//   if (tocHeader) {
+//     tocHeader.addEventListener("click", function () {
+//       if (window.innerWidth < 767) {
+//         tocBlock.classList.toggle("open");
+//       }
+//     });
+//   }
+
+  
+//   if (aside && mainContent) {
+//     let asideWidth = null;
+//     let asideLeft = null;
+
+//     const updateAsidePosition = () => {
+//       if (window.innerWidth >= 767) {
+//         const rect = aside.getBoundingClientRect();
+//         asideWidth = rect.width;
+//         asideLeft = rect.left + window.scrollX;
+//       }
+//     };
+
+//     updateAsidePosition();
+//     window.addEventListener("resize", updateAsidePosition);
+
+//     window.addEventListener("scroll", function () {
+//       if (window.innerWidth >= 767) {
+//         const asideRect = aside.getBoundingClientRect();
+//         const mainRect = mainContent.getBoundingClientRect();
+
+//         if (mainRect.top < 0 && mainRect.bottom > asideRect.height) {
+//           aside.classList.add("sticky");
+//           aside.classList.remove("stop");
+//           aside.style.width = asideWidth + "px";
+//           aside.style.left = asideLeft + "px";
+//         } else if (mainRect.bottom <= asideRect.height) {
+//           aside.classList.remove("sticky");
+//           aside.classList.add("stop");
+//           aside.style.width = "";
+//           aside.style.left = "";
+//         } else {
+//           aside.classList.remove("sticky", "stop");
+//           aside.style.width = "";
+//           aside.style.left = "";
+//         }
+//       } else {
+//         aside.classList.remove("sticky", "stop");
+//         aside.style.width = "";
+//         aside.style.left = "";
+//       }
+//     });
+//   }
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // TOC toggle (mobile)
+  const tocBlock  = document.querySelector(".toc-block");
+  const tocHeader = tocBlock?.querySelector("h4");
+  if (tocHeader) {
+    tocHeader.addEventListener("click", () => {
+      if (window.innerWidth < 767) tocBlock.classList.toggle("open");
+    });
+  }
+
+  // Sticky aside via GSAP
+  const asideCol = document.querySelector(".blog-aside-content");
+  const mainCol  = document.querySelector(".blog-main-content");
+
+  if (asideCol && mainCol) {
+    let asideInner = asideCol.querySelector(".aside-inner");
+    if (!asideInner) {
+      const wrap = document.createElement("div");
+      wrap.className = "aside-inner";
+      while (asideCol.firstChild) wrap.appendChild(asideCol.firstChild);
+      asideCol.appendChild(wrap);
+      asideInner = wrap;
+    }
+
+    ScrollTrigger.matchMedia({
+      "(min-width: 768px)": function () {
+        let st;
+        const setLockedWidth = () => {
+          const w = asideCol.clientWidth;  
+          gsap.set(asideInner, { width: w }); 
+        };
+        const clearLockedWidth = () => gsap.set(asideInner, { width: "" });
+
+        st = ScrollTrigger.create({
+          trigger: asideInner,
+          start: "top top+=16",
+          end: () => "+=" + Math.max(0, mainCol.offsetHeight - asideInner.offsetHeight),
+          pin: true,     
+          pinSpacing: true,  
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+          onRefreshInit: setLockedWidth,
+          onRefresh: setLockedWidth,
+          onKill: clearLockedWidth
+        });
+        window.addEventListener("load", () => ScrollTrigger.refresh());
+        window.addEventListener("resize", () => ScrollTrigger.refresh());
+        return () => {
+          st && st.kill();
+          clearLockedWidth();
+        };
+      }
+    });
+  }
+});
