@@ -177,6 +177,21 @@
   .share-article li.share-link a{
     @apply bg-transparent w-[6.31rem] h-[2.43rem] rounded-none flex items-center justify-center
   }
+  .form ::-webkit-input-placeholder {
+    @apply uppercase text-base text-[#FBFBFB];
+  }
+  .form :-ms-input-placeholder {
+    @apply uppercase text-base text-[#FBFBFB];
+  }
+  .form ::-ms-input-placeholder {
+    @apply uppercase text-base text-[#FBFBFB];
+  }
+  .form ::-moz-placeholder {
+    @apply uppercase text-base text-[#FBFBFB];
+  }
+  .form ::placeholder {
+    @apply uppercase text-base text-[#FBFBFB];
+  }
 }
 
 
@@ -1178,6 +1193,112 @@ header .nav-image {
     right: -0.4rem;
     top: -0.3rem;
   }
+  .contact-form label{
+    color: #FBFBFB;
+    font-family: var(--font-bebas);
+    text-transform: uppercase;
+    margin-bottom: 0;
+    display: block;
+    font-size: 2.62rem;
+    line-height: 0.95;
+  }
+  .contact-form input,.contact-form select{
+    width: 100%;
+    border:0;
+    background-color: rgba(0,0,0,0);
+    border-bottom: 0.06rem solid #FBFBFB;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .contact-form textarea{
+    padding: 1rem 0;
+    height: 13rem;
+    resize: none;
+    width: 100%;
+    border-bottom: 0.06rem solid #FBFBFB;
+  }
+  .contact-form input:focus, .contact-form select:focus,.contact-form textarea:focus{
+    outline: none;
+    box-shadow: none;
+  }
+  .contact-form .select-field{
+    position: relative;
+  }
+  .contact-form .select-field:after{
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 1.6rem;
+    border-top: 0.76rem solid var(--color-white);
+    border-left: 0.66rem solid transparent;
+    border-right: 0.66rem solid transparent;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .contact-form .select-field select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none; 
+    padding-right: 1rem;
+  }
+  .contact-form input[type=submit],.contact-form button[type=submit]{
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    text-transform: uppercase;
+    border: 0;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease 0;
+  }
+  .contact-form input[type=submit]:hover,.contact-form button[type=submit]:hover{
+    background-color: var(--color-white);
+    color: #000;
+  }
+  .contact-form .input-no-border input{
+    border: 0;
+  }
+  input[type=checkbox]{
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+  }
+  .checkbox-field label{
+    font-size: 1rem;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    text-transform: inherit;
+    padding-left: 3rem;
+    position: relative;
+  }
+  .checkbox-field input[type=checkbox]{
+    opacity: 0;
+    display: none;
+  }
+  .checkbox-field input[type=checkbox] + label{
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.1;
+  }
+  .checkbox-field input[type=checkbox] + label:before{
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--clr-white);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    transition: all 0.3s ease;
+  }
+  .checkbox-field input[type=checkbox]:checked + label:before{
+    border: 0.4rem solid var(--clr-blue)
+  }
   @media(max-width: 1401px){
     html{
       font-size: 15.5556px;
@@ -1322,6 +1443,14 @@ header .nav-image {
     }
     .blog-aside-content .toc-block{
       border: none !important;
+    }
+
+    .contact-form .select-field{
+      position: relative;
+    }
+    .contact-form .select-field:after{
+      right: 0.7rem;
+      padding-right: 1.7rem;
     }
   }
   @media(max-width: 700px){

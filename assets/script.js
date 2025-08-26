@@ -305,66 +305,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const tocBlock = document.querySelector(".toc-block");
-//   const tocHeader = tocBlock?.querySelector("h4");
-//   const aside = document.querySelector(".blog-aside-content");
-//   const mainContent = document.querySelector(".blog-main-content");
-
-  
-//   if (tocHeader) {
-//     tocHeader.addEventListener("click", function () {
-//       if (window.innerWidth < 767) {
-//         tocBlock.classList.toggle("open");
-//       }
-//     });
-//   }
-
-  
-//   if (aside && mainContent) {
-//     let asideWidth = null;
-//     let asideLeft = null;
-
-//     const updateAsidePosition = () => {
-//       if (window.innerWidth >= 767) {
-//         const rect = aside.getBoundingClientRect();
-//         asideWidth = rect.width;
-//         asideLeft = rect.left + window.scrollX;
-//       }
-//     };
-
-//     updateAsidePosition();
-//     window.addEventListener("resize", updateAsidePosition);
-
-//     window.addEventListener("scroll", function () {
-//       if (window.innerWidth >= 767) {
-//         const asideRect = aside.getBoundingClientRect();
-//         const mainRect = mainContent.getBoundingClientRect();
-
-//         if (mainRect.top < 0 && mainRect.bottom > asideRect.height) {
-//           aside.classList.add("sticky");
-//           aside.classList.remove("stop");
-//           aside.style.width = asideWidth + "px";
-//           aside.style.left = asideLeft + "px";
-//         } else if (mainRect.bottom <= asideRect.height) {
-//           aside.classList.remove("sticky");
-//           aside.classList.add("stop");
-//           aside.style.width = "";
-//           aside.style.left = "";
-//         } else {
-//           aside.classList.remove("sticky", "stop");
-//           aside.style.width = "";
-//           aside.style.left = "";
-//         }
-//       } else {
-//         aside.classList.remove("sticky", "stop");
-//         aside.style.width = "";
-//         aside.style.left = "";
-//       }
-//     });
-//   }
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
