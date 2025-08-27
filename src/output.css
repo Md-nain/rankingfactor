@@ -3465,6 +3465,9 @@ header .nav-image {
     background-image: none;
     padding-right: 1rem;
   }
+  .contact-form .select-field select option {
+    color: #000;
+  }
   .contact-form input[type=submit],.contact-form button[type=submit] {
     background-color: var(--clr-blue);
     color: var(--clr-white);
