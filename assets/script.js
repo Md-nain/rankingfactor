@@ -130,7 +130,7 @@ function revealMenuItems() {
   });
 
   gsap.to(".loader", {
-    opacity: 0,
+    opacity: 1,
     pointerEvents: "none",
     duration: 1,
     delay: 3.5,
@@ -362,3 +362,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function toggleAccordion(button) {
+  const item = button.closest('.accordion-item');
+  const allItems = document.querySelectorAll('.accordion-item');
+  allItems.forEach((el) => {
+    if (el !== item) {
+      el.classList.remove('open');
+    }
+  });
+  item.classList.toggle('open');
+}
+

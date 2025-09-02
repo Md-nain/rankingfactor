@@ -79,16 +79,20 @@
   }
   .jumbotron-title span{
     font-family: var(--font-eagle);
+    /* text-shadow: -0.36rem -0.36rem 0 #fff,0.36rem 0.36rem 0 #FFF,-0.3rem -0.3rem 0 #fff,0.3rem 0.3rem 0 #FFF,-0.2rem -0.2rem 0 #fff,0.2rem 0.2rem 0 #FFE,-0.1rem -0.1rem 0 #fff,0.1rem 0.1rem 0 #FFE,-0.05rem -0.05rem 0 #fff,0.05rem 0.05rem 0 #FFE,-0.03rem -0.03rem 0 #fff,0.03rem 0.03rem 0 #FFE; */
+    text-shadow: 0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff;
     @apply text-[1.8rem] md:text-[4.375rem] text-[#3B5FDF]
   }
   .heading-accent h2,.heading-accent h3{
-    @apply font-bold text-[3.9rem] md:text-[9.375rem] 
+    @apply font-bold text-[3.9rem] md:text-[9.375rem] flex flex-col
   }
   .heading-accent.center-aligned > span{
     font-family: 'Eagle Horizon', serif;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* text-shadow: -0.36rem -0.36rem 0 #fff,0.36rem 0.36rem 0 #FFF,-0.3rem -0.3rem 0 #fff,0.3rem 0.3rem 0 #FFF,-0.2rem -0.2rem 0 #fff,0.2rem 0.2rem 0 #FFE,-0.1rem -0.1rem 0 #fff,0.1rem 0.1rem 0 #FFE,-0.05rem -0.05rem 0 #fff,0.05rem 0.05rem 0 #FFE,-0.03rem -0.03rem 0 #fff,0.03rem 0.03rem 0 #FFE; */
+    text-shadow: 0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff;
     @apply  absolute text-[1.8rem] md:text-[4.37rem] z-10 flex-nowrap text-[#3B5FDF] w-full 
   }
   .heading-accent.left-aligned > span{
@@ -96,6 +100,8 @@
     top: 57%;
     left: 2%;
     transform: translateY(-50%);
+    /* text-shadow: -0.36rem -0.36rem 0 #fff,0.36rem 0.36rem 0 #FFF,-0.3rem -0.3rem 0 #fff,0.3rem 0.3rem 0 #FFF,-0.2rem -0.2rem 0 #fff,0.2rem 0.2rem 0 #FFE,-0.1rem -0.1rem 0 #fff,0.1rem 0.1rem 0 #FFE,-0.05rem -0.05rem 0 #fff,0.05rem 0.05rem 0 #FFE,-0.03rem -0.03rem 0 #fff,0.03rem 0.03rem 0 #FFE; */
+    text-shadow: 0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff,0 0 0.4rem #fff;
     @apply  absolute text-[1.8rem] md:text-[4.37rem] z-10 flex-nowrap text-[#3B5FDF] w-full 
   }
 
@@ -118,13 +124,13 @@
   
   
   .industry-cell {
-    @apply border-r border-b border-[0.06rem] border-white px-3 py-8 md:py-10 relative flex items-center justify-center cursor-pointer transition-colors;
+    @apply relative border-r border-b border-[0.06rem] border-white px-3 py-8 md:py-10 relative flex items-center justify-center cursor-pointer transition-colors;
   }
   .industry-cell span {
     @apply text-white font-medium text-xl md:text-[1.375rem] leading-[121%] text-center;
   }
   .industry-cell img{
-    @apply absolute object-cover w-full h-full
+    @apply object-cover w-full h-full
   }
   
   .vertical-heading h2 {
@@ -163,7 +169,10 @@
     @apply w-full h-full object-cover object-center
   }
   .secondary-banner h1{
-    @apply md:text-[13.12rem]
+    @apply text-[4.8rem] md:text-[13.12rem]
+  }
+  .secondary-banner.blog-post-banner h1{
+    @apply md:text-[6.25rem]
   }
   .blog-card .card-content{
     @apply bg-white hover:bg-[#3B5FDF]
@@ -409,12 +418,11 @@ header .nav-image {
 .upper-text span, .lower-text span {
   /* Responsive font size */
   /* font-size: clamp(2rem, 15vw, 250px); */
-  font-size: 13.43rem;
+  font-size: 9.8rem;
   font-family: var(--font-poppins);
   font-weight: 700;
   color: #fff;
   white-space: nowrap;
-  opacity: 0;
   transform: translateX(0);
   line-height: 1;
   letter-spacing: -0.125rem;
@@ -512,10 +520,9 @@ header .nav-image {
 
 .industry-cell {
   position: relative;
-  overflow: hidden;
 }
 
-.industry-cell::before {
+/* .industry-cell::before {
   content: "";
   position: absolute;
   left: 0;
@@ -528,28 +535,52 @@ header .nav-image {
   opacity: 0;
   visibility: none;
   pointer-events: none;
-}
-.industry-cell:hover::before{
+} */
+/* .industry-cell:hover::before{
   opacity: 0.82;
   visibility: visible;
-}
-.industry-cell img{
+} */
+/* .industry-cell img{
   opacity: 0;
   transition: all 1s cubic-bezier(.4,0,.2,1);
 }
 .industry-cell:hover img{
   opacity: 1;
   transform: scale(1.06);
-}
+} */
 
-.industry-cell:hover::before {
+/* .industry-cell:hover::before {
   width: 100%;
-}
+} */
 
 .industry-cell span {
   position: relative;
   z-index: 2;
   transition: color 0.4s cubic-bezier(.4,0,.2,1);
+}
+.industry-cell > span{
+  transition: all 1s cubic-bezier(.4,0,.2,1);
+}
+.industry-cell:hover > span {
+  opacity: 0;
+}
+.industry-cell .feature-image{
+  opacity: 0;
+  background-color: var(--clr-blue);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s cubic-bezier(.4,0,.2,1);
+}
+.industry-cell .feature-image img{
+  opacity: 0.1;
+  position: absolute;
+}
+.industry-cell:hover .feature-image {
+    opacity: 1;
+    transform: rotate(-8deg);
+    
 }
 
 
@@ -741,6 +772,21 @@ header .nav-image {
     transform: scaleY(-1);
     background-image: url('../assets/images/icons/right-reverse-curve-dark.svg');
   }
+  footer .social-links a{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--clr-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.24rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+  }
+  footer .social-links a:hover{
+    background-color: var(--clr-blue);
+    color: #fff;
+  }
    .footer-navigation ul{
     display: flex;
     flex-wrap: wrap;
@@ -760,9 +806,26 @@ header .nav-image {
   .footer-navigation li a:hover{
     color: #3B5FDF
   }
-
+  footer a{
+    transition: all 0.3s ease 0s;
+  }
   .contact-info a{
     font-family: var(--font-bebas);
+    transition: all 0.3s ease 0s;
+  }
+  .contact-info a:hover{
+    color: var(--clr-blue);
+  }
+  .contact-info .icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--clr-blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.24rem
   }
   .secondary-banner h1{
     position: relative;
@@ -770,14 +833,22 @@ header .nav-image {
   .secondary-banner h1 i:before{
     content: '';
     color: var(--clr-blue);
-    width: 12.25rem;
-    height: 13.8rem;
-    background-image: url('../assets/images/icons/hash-icon.svg');
+    width: 9.18rem;
+    height: 10.3rem;
+    background-image: url('../assets/images/icons/hash-icon2.svg');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    left: -3.75rem;
-    top: -3.2rem;
+    /* left: -3.75rem;
+    top: -3.2rem; */
+    left: -1.6rem;
+    top: -1.74rem;
+  }
+  .secondary-banner.blog-post-banner h1 i:before {
+    width: 5.18rem;
+    height: 6.3rem;
+    left: -1rem;
+    top: -1rem;
   }
   .service-card{
     text-transform: uppercase;
@@ -959,7 +1030,7 @@ header .nav-image {
   .ourvalues-listing .item{
     letter-spacing: 0.04rem;
   }
-  .ourvalues-listing .item > div{
+  /* .ourvalues-listing .item > div{
     transition: all 0.3s ease 0s;
   }
   .ourvalues-listing .item > div:before{
@@ -972,14 +1043,14 @@ header .nav-image {
     left: 0;
     z-index: 0;
     transition: width 1s cubic-bezier(.4,0,.2,1);
-  }
-  .ourvalues-listing .item > div *{
+  } */
+  /* .ourvalues-listing .item > div *{
     position: relative;
-  }
-  .ourvalues-listing .item > div:hover:before{
+  } */
+  /* .ourvalues-listing .item > div:hover:before{
     width: 100%;
-  }
-  .ourvalues-listing .item > div:after{
+  } */
+  /* .ourvalues-listing .item > div:after{
     content: '';
     position: absolute;
     left: 1.3rem;
@@ -991,10 +1062,10 @@ header .nav-image {
     filter: brightness(0) invert(1);
     width: 2rem;
     height: 2rem;
-  }
-  .ourvalues-listing .item > div:hover:after{
+  } */
+  /* .ourvalues-listing .item > div:hover:after{
     filter: none;
-  }
+  } */
   .blog-card .card-content{
     transition: all 0.3s ease 0s;
     height: 100%;
@@ -1053,6 +1124,9 @@ header .nav-image {
   }
   .toc-block ol ol li{
     list-style: lower-alpha
+  }
+  .toc-block li>a:hover{
+    color: var(--clr-blue);
   }
   .blog-main-content h2{
     position: relative;
@@ -1303,6 +1377,118 @@ header .nav-image {
   .checkbox-field input[type=checkbox]:checked + label:before{
     border: 0.4rem solid var(--clr-blue)
   }
+  .accordion-item button{
+    cursor: pointer;
+  }
+  .accordion-item button:after{
+    content: '';
+    position: absolute;
+    left: 1.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../assets/images/icons/bulb-icon.svg');
+    filter: brightness(0) invert(1);
+    width: 2rem;
+    height: 2rem;
+  } 
+  .secondary-accordion-list .accordion-item{
+    color: #fff;
+  }
+  .secondary-accordion-list .accordion-item .item-content{
+    transition: all 0.3s ease 0s
+  }
+  .secondary-accordion-list .accordion-item.open .item-content{
+    background-color: #fff;
+    color: var(--clr-blue);
+  }
+  .secondary-accordion-list .accordion-item.open p{
+    color: var(--clr-blue) !important;
+  }
+  
+  .accordion-item.open button:after{
+    filter: none;
+  }
+  .accordion-item .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      padding-top: 0;
+      padding-bottom: 0;
+      transition: all 0.8s ease;
+      opacity: 0;
+      padding-left: 4.2rem;
+      padding-right: 1rem;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      line-height: 1.2;
+  }
+  .accordion-item.open .accordion-content{
+    max-height: none !important;
+    padding-top: 0.25rem;
+    padding-bottom: 1.1rem;
+    opacity: 1;
+  }
+
+  .primary-accordion-list .accordion-item button{
+    text-align: right;
+    padding: 2.8rem 2.5rem 2.8rem 8rem;
+  }
+  .primary-accordion-list .accordion-item button:after{
+    content: '';
+    position: absolute;
+    left: 1.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../assets/images/icons/accordion-arrow.svg');
+    filter: brightness(0) invert(1);
+    width: 7.2rem;
+    height: 7.2rem;
+  } 
+  .primary-accordion-list .accordion-item.open button{
+    max-height: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    transition: all 0.1s ease;
+    opacity: 0;
+    font-size: 0 !important;
+  }
+  .primary-accordion-list .accordion-item.open button span{
+    font-size: 0;
+  }
+  .primary-accordion-list .accordion-item .accordion-content{
+    background-color: #fff;
+    color: #142041
+  }
+  .primary-accordion-list .accordion-item .accordion-content h3,.primary-accordion-list .accordion-item .accordion-content p{
+    color: #142041 !important
+  }
+  .primary-accordion-list .accordion-item.open .accordion-content{
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+  .primary-accordion-list .accordion-item .accordion-content{
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  .primary-accordion-list .accordion-item h3{
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  .primary-accordion-list .accordion-item .figure{
+    transform: rotate(-8deg);
+  }
+  .share-article li a{
+    transition: all 0.3s ease 0s;
+  }
+  .share-article li a:hover{
+    transform: translateY(-0.1rem);
+  }
+
+
+
   @media(max-width: 1401px){
     html{
       font-size: 15.5556px;
@@ -1427,7 +1613,7 @@ header .nav-image {
     .upper-text span, .lower-text span {
       font-size: 3.8rem !important
     }
-    .ourvalues-listing .item > div:after{
+    .accordion-item button:after{
       left: 0.2rem;
     }
     .toc-block .content {
@@ -1455,6 +1641,20 @@ header .nav-image {
     .contact-form .select-field:after{
       right: 0.7rem;
       padding-right: 1.7rem;
+    }
+    .industry-cell {
+      min-height: 11.6rem;
+    }
+    .accordion-item .accordion-content{
+      padding-left: 2.8rem;
+    }
+    .primary-accordion-list .accordion-item button:after {
+      width: 4.2rem;
+      height: 4.2rem;
+      left: 0.8rem;
+    }
+    .primary-accordion-list .accordion-item button {
+      padding: 2rem 1.8rem 2rem 6.2rem;
     }
   }
   @media(max-width: 700px){
@@ -1524,5 +1724,10 @@ header .nav-image {
     position: absolute;
     bottom: 0;
     top: auto;
+  }
+}
+@media(min-width: 1499px){
+  .upper-text span, .lower-text span {
+    font-size: 11vw;
   }
 }

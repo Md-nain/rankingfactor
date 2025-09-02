@@ -8,6 +8,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
       <link rel="stylesheet" href="src/output.css" />
   </head>
@@ -71,10 +72,10 @@
       <!-------Loader----------------------------------------->
       <section class="loader">
         <div class="upper-text poppins">
-          <span>Ranking Factor.</span>
+          <span>RANK, WIN, GROW</span>
         </div>
         <div class="lower-text poppins ">
-          <span>Ranking Factor.</span>
+          <span>RANK, WIN, GROW</span>
         </div>
       </section>
       <!-------Loader-------->
@@ -139,7 +140,7 @@
 
 
       <!---------Our Vision section----------->
-      <section class="bg-[#3B5FDF] py-16 md:pt-25 md:pb-22rem">
+      <section class="bg-[#3B5FDF] pt-16 md:pt-25">
         <div class="max-w-[82.5rem] mx-auto px-4">
           
           <!-- Heading -->
@@ -164,20 +165,17 @@
             <div class="text-link [&_a]:pb-1 [&_a]:border-b-[0.12rem]  [&_a]:border-white [&_a]:hover:text-[black] [&_a]:hover:border-black [&_a]:transition-colors [&_a]:duration-300">
               <a href="#">*Start Your SEO Growth Today*</a>
             </div>
-            
+          </div>
+
+          <div class="hero-image mt-10 md:mt-14 border-[0.8rem] md:border-[1.18rem] border-white" data-aos="zoom-in"  data-aos-duration="1200" data-aos-easing="ease" data-aos-delay="300">
+            <img src="assets/images/main-image.jpg" width="1440" height="960" alt="staff members with laptop">
           </div>
 
         </div>
       </section>
       <!---------Our Vision section----------->
 
-      <!---------Hero image section----------->
-      <section class="relative w-full">
-        <div class="hero-image" data-aos="zoom-in"  data-aos-duration="1200" data-aos-easing="ease" data-aos-delay="300">
-          <img src="assets/images/main-image.jpg" width="1440" height="960" alt="staff members with laptop">
-        </div>
-      </section>
-      <!---------Hero image section----------->
+     
 
 
       <!---------Our Values section----------->
@@ -197,32 +195,66 @@
             </span>
           </div>
 
+          <!--ourvalues-listing-->
           <div class="ourvalues-listing flex flex-wrap pt-9 md:pt-14">
-            <!--item-->
-            <div class="item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
-               <div class="relative bebas text-4xl font-bold border-b-[0.06rem] text-white border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-1 md:pe-4 hover:text-[#3B5FDF]">
-                <span>Clarity Over Complexity: We break down strategy into steps that make sense</span>
-              </div>
-            </div><!--item-->
-            <!--item-->
-            <div class="item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
-              <div class="relative bebas text-4xl font-bold border-b-[0.06rem] text-white border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-1 md:pe-4 hover:text-[#3B5FDF]">
-                <span>Partnership, Not Just Service: We treat your goals like our own</span>
-              </div>
-            </div><!--item-->
-            <!--item-->
-            <div class="item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
-               <div class="relative bebas text-4xl font-bold border-b-[0.06rem] text-white border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-1 md:pe-4 hover:text-[#3B5FDF]">
-                <span>Performance-Driven: Rankings are great — but we care more about real results</span>
-              </div>
-            </div><!--item-->
-            <!--item-->
-            <div class="item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
-               <div class="relative bebas text-4xl font-bold border-b-[0.06rem] text-white border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-1 md:pe-4 hover:text-[#3B5FDF]">
-                <span>Always Evolving: SEO never stands still, and neither do we</span>
-              </div>
-            </div><!--item-->
-          </div>
+            <!-- Secondary Accordion -->
+            <div class="secondary-accordion-list flex flex-wrap">
+              <!--accordion-->
+              <div class="accordion-item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content">
+                  <button class="w-full text-start relative bebas text-4xl font-bold border-b-[0.06rem] border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-2 md:pe-4" onclick="toggleAccordion(this)">
+                    <span>Clarity Over Complexity: We break down strategy into steps that make sense</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <p>
+                      Clarity Over Complexity: We break down strategy into steps that make sense
+                    </p>
+                  </div>
+                </div>
+              </div><!--accordion-->
+              <!--accordion-->
+              <div class="accordion-item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content">
+                  <button class="w-full text-start relative bebas text-4xl font-bold border-b-[0.06rem] border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-2 md:pe-4" onclick="toggleAccordion(this)">
+                    <span>Partnership, Not Just Service: We treat your goals like our own</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <p>
+                      Partnership, Not Just Service: We treat your goals like our own
+                    </p>
+                  </div>
+                </div>
+              </div><!--accordion-->
+              <!--accordion-->
+              <div class="accordion-item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content">
+                  <button class="w-full text-start relative bebas text-4xl font-bold border-b-[0.06rem] border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-2 md:pe-4" onclick="toggleAccordion(this)">
+                    <span>Performance-Driven: Rankings are great — but we care more about real results</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <p>
+                      Performance-Driven: Rankings are great — but we care more about real results
+                    </p>
+                  </div>
+                </div>
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full md:w-[50%] md:px-5 md:mb-6" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content">
+                  <button class="w-full text-start relative bebas text-4xl font-bold border-b-[0.06rem] border-white pt-4 pb-3 leading-[100%] ps-11 md:ps-17 pe-2 md:pe-4" onclick="toggleAccordion(this)">
+                    <span>Always Evolving: SEO never stands still, and neither do we</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <p>
+                      Always Evolving: SEO never stands still, and neither do we
+                    </p>
+                  </div>
+                </div>
+              </div><!--accordion-->
+            </div><!-- Secondary Accordion -->
+          </div><!--ourvalues-listing-->
+
         </div>
       </section>
       <!---------Our Values section----------->
@@ -388,47 +420,47 @@
     </main> <!-- page main content-->
 
     <!---------Footer---------->
-
     <footer class="pt-20 md:pt-30 px-4">
-
       <div class="max-w-[82rem] mx-auto">
-
-        <div class="w-full h-auto [&_img]:w-full md:px-2" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+        <div class="w-full sm:w-[40%] h-auto [&_img]:w-full md:px-2" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
           <img src="assets/images/Ranking-Factor-Logo.png" alt="Ranking Factor Logo">
         </div>
 
         <!-----Footer navigation----->
-        <div class="flex flex-col md:flex-row justify-between  md:items-start gap-8 py-20 md:py-30" data-aos="fade-up"  data-aos-duration="1500"  data-aos-easing="ease" data-aos-delay="200" >
+        <div class="flex flex-col md:flex-row justify-between  md:items-start gap-8 py-20 md:py-26" data-aos="fade-up"  data-aos-duration="1500"  data-aos-easing="ease" data-aos-delay="200" >
           <!-- Navigation Links -->
           <div class="flex flex-col gap-8 footer-navigation w-full md:w-[56%] md:ps-3 md:pe-3">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Who We Help</a></li>
-              <li><a href="#">SEO Solution</a></li>
-              <li><a href="#">Who We Are</a></li>
-              <li><a href="#">Insights</a></li>
-              <li><a href="#">Get Started</a></li>
+              <li><a href="javascript:void(0);">Home</a></li>
+              <li><a href="javascript:void(0);">Who We Help</a></li>
+              <li><a href="javascript:void(0);">SEO Solution</a></li>
+              <li><a href="javascript:void(0);">Who We Are</a></li>
+              <li><a href="javascript:void(0);">Insights</a></li>
+              <li><a href="javascript:void(0);">Get Started</a></li>
             </ul>
           </div>
           <!-- Contact Details -->
           <div class="flex contact-info w-full md:w-[44%] md:pe-3">
             <div class="flex flex-col gap-5 md:gap-10 md:ml-auto">
-              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_span]:me-2 uppercase text-white">
-                <span>[Email]</span>
+              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_.icon]:me-2 uppercase text-white">
+                <div class="icon">
+                  <i class="fa fa-envelope"></i>
+                </div>
                 <a href="mailto:sales@rankingfactormarketing.com">sales@rankingfactormarketing.com</a>
               </div>
 
-              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_span]:me-2 uppercase text-white">
-                <span>[Phone]</span>
+              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_.icon]:me-2 uppercase text-white">
+                <div class="icon">
+                  <i class="fa fa-phone"></i>
+                </div>
                 <a href="tel:+13074790517">1 307 479 0517</a>
               </div>
 
-              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_span]:me-2 uppercase text-white">
-                <span>[Social]</span>
-                <div class="flex flex-wrap gap 4 md:gap-11">
-                  <a href="#" class="f-contact heading">Facebook</a>
-                  <a href="#" class="f-contact heading">LinkedIn</a>
-                  <a href="#" class="f-contact heading">Instagram</a>
+              <div class="social-links flex items-center font-light [&_a]:font-bold uppercase text-white">
+                <div class="flex flex-wrap gap-4 md:gap-5">
+                  <a href="javascript:void(0);" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="javascript:void(0);" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="javascript:void(0);" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -440,7 +472,6 @@
         </div>
 
       </div>
-
     </footer>
     <!---------Footer---------->
 

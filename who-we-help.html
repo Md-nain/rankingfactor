@@ -8,6 +8,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
       <link rel="stylesheet" href="src/output.css" />
   </head>
@@ -71,10 +72,10 @@
       <!-------Loader----------------------------------------->
       <section class="loader">
         <div class="upper-text poppins">
-          <span>Ranking Factor.</span>
+          <span>RANK, WIN, GROW</span>
         </div>
         <div class="lower-text poppins ">
-          <span>Ranking Factor.</span>
+          <span>RANK, WIN, GROW</span>
         </div>
       </section>
       <!-------Loader-------->
@@ -124,128 +125,331 @@
             </p>
           </div><!-- Desscription -->
 
-          <!-- Services Cards -->
-          <div class="services-cards-list flex flex-wrap md:mx-[-1.3rem] pt-10 md:pt-17">
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Home Remodeling</h3>
-                <p>
-                  Showcase your craftsmanship and win more renovation projects with SEO strategies tailored for remodeling services.
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img1.png" width="288" height="187" alt="service image">
+
+
+          <!-- Primary Accordion -->
+            <div class="primary-accordion-list text-white pb-16 md:pb-22">
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Home Remodeling</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img1.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Home Remodeling</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>HVAC <br>Companies</h3>
-                <p>
-                  Get found by local homeowners searching for AC repair, heating installation, and emergency HVAC support.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img2.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>HVAC Companies</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img2.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>HVAC Companies</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Pest <br>Control</h3>
-                <p>
-                  Dominate local searches for pest removal with geo-targeted content and Google Business optimization.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img3.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Pest Control</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img3.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Pest Control</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Carpet Cleaning</h3>
-                <p>
-                  Keep your calendar full by ranking for carpet, upholstery, and floor cleaning services in your area.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img4.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Carpet Cleaning</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img4.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Carpet Cleaning</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Gutter Cleaning</h3>
-                <p>
-                Attract seasonal leads with content designed to rank during high-demand months and improve visibility year-round.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img5.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Gutter Cleaning</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img5.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Gutter Cleaning</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Landscaping Care</h3>
-                <p>
-                  Grow your lawn care or landscape design business by showing up first when clients search in your service area.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img6.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Landscaping Care</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img6.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Landscaping Care</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Electrical Services</h3>
-                <p>
-                  Boost visibility for everything from panel upgrades to emergency electrical repairs with precision-focused SEO.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img7.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Electrical Services</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img7.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Electrical Services</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Roofing Companies</h3>
-                <p>
-                  Whether it’s storm damage or a full replacement, we help roofers stay top-of-mind in local search.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img8.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Roofing Companies</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img8.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Roofing Companies</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Residential & Commercial Cleaning</h3>
-                <p>
-                  Rank high in searches for home, office, and specialty cleaning services with high-converting content and reviews.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img9.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Residential & Commercial Cleaning</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img9.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Residential & Commercial Cleaning</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
-            <!--card-->
-            <div class="service-card w-full md:w-1/3 md:px-[1.3rem] pb-[8rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="card-content relative border-[0.06rem] border-white px-10 pt-10 pb-[7.5rem] space-y-[1.3rem]">
-                <h3>Plumbing Services</h3>
-                <p>
-                  Capture emergency and routine plumbing calls by appearing at the top of Google Maps and organic search results.  
-                </p>
-                <div class="feature-image absolute w-[18rem] h-[11.68rem] md:right-[-1.1rem] bottom-[-5rem] border-white border-[0.37rem] [&_img]:object-cover [&_img]:w-full [&_img]:h-full">
-                  <img src="assets/images/services/service-img10.png" width="288" height="187" alt="service image">
+              </div><!--accordion-->
+
+              <!--accordion-->
+              <div class="accordion-item w-full" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+                <div class="item-content border-b-[0.06rem] border-white">
+                  <button class="w-full text-end relative bebas text-5xl md:text-[5rem] font-bold leading-[100%]" onclick="toggleAccordion(this)">
+                    <span>Plumbing Services</span>
+                  </button>
+                  <div class="accordion-content space-y-[0.5rem]">
+                    <div class="flex flex-wrap">
+                      <div class="order-1 md:order-2 w-full md:w-[46%] flex md:justify-end md:pe-[2rem] ps-[1rem] pb-[3rem] md:pt-[3rem]">
+                        <div class="figure rotated-figure border-[0.375rem] w-[28.7rem] h-[18.75rem] border-[#3B5FDF] [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+                          <img src="assets/images/services/service-img10.png" width="288" height="187" alt="service image">
+                        </div>
+                      </div>
+                      <div class="order-2 md:order-1 w-full md:w-[54%] space-y-[1.2rem] md:pe-[3.6rem]">
+                        <h3>Plumbing Services</h3>
+                        <p>
+                          From kitchens and bathrooms to complete renovations, home remodeling businesses thrive on visual credibility and local trust. 
+                        </p>
+                        <p>
+                          Our SEO strategies ensure your services appear when homeowners search for “remodeling near me,” “kitchen renovation ideas,” or “licensed contractors in [your city].” We optimize your site structure, project gallery, and content to highlight your craftsmanship and make sure you’re not just seen — but chosen.
+                        </p>
+                        <div class="pt-2">
+                          <a href="#" class="btn transition text-white  bg-[#3B5FDF] hover:bg-[#142041] text-center">
+                            Learn More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div><!--card-->
+              </div><!--accordion-->
+            </div><!-- Primary Accordion -->
           </div>
         </div>
       </section>
@@ -339,13 +543,13 @@
         <div class="max-w-[82.5rem] mx-auto">
           
           <!-- Heading -->
-          <div class="relative inline-block jumbotron-title [&_span]:absolute [&_span]:top-[57.5%] [&_span]:w-full  [&_span]:left-[2%] md:[&_span]:left-[0.1%] [&_span]:-translate-y-1/2"
+          <div class="relative inline-block jumbotron-title [&_span]:absolute [&_span]:top-[50%] [&_span]:w-full  [&_span]:left-[2%] md:[&_span]:left-[0.1%] [&_span]:-translate-y-1/2"
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-easing="ease"
             data-aos-delay="100"
           >
-            <h2>Meet Our Team</h2>
+            <h2>Meet Our <br>CEO</h2>
             <span>
               The People Powering
             </span>
@@ -358,51 +562,6 @@
           </div>
 
           <div class="team-listing flex flex-wrap pt-9 md:pt-14">
-            <!--member-card-->
-            <div class="member-item w-full md:w-[50%] md:px-[0.5rem] mb-[1rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="member-content md:min-h-[28.25rem] relative overflow-hidden">
-                <div class="feature-image md:absolute left-0 top-0 w-full h-full">
-                  <img src="assets/images/team/member-1.png" width="600" height="420" alt="member image">
-                </div>
-                <div class="overlay-content text-xl md:text-lg uppercase">
-                  <h3>Alex R</h3>
-                  <p>
-                    Specializes in local and national SEO planning, keyword targeting, and performance tracking.
-                  </p>
-                  <a href="#" class="blur-btn">SEO Strategist</a>
-                </div>
-              </div>
-            </div><!--member-card-->
-            <!--member-card-->
-            <div class="member-item w-full md:w-[50%] md:px-[0.5rem] mb-[1rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="member-content md:min-h-[28.25rem] relative overflow-hidden">
-                <div class="feature-image md:absolute left-0 top-0 w-full h-full">
-                  <img src="assets/images/team/member-1.png" width="600" height="420" alt="member image">
-                </div>
-                <div class="overlay-content text-xl md:text-lg uppercase">
-                  <h3>Alex R</h3>
-                  <p>
-                    Specializes in local and national SEO planning, keyword targeting, and performance tracking.
-                  </p>
-                  <a href="#" class="blur-btn">SEO Strategist</a>
-                </div>
-              </div>
-            </div><!--member-card-->
-            <!--member-card-->
-            <div class="member-item w-full md:w-[50%] md:px-[0.5rem] mb-[1rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
-              <div class="member-content md:min-h-[28.25rem] relative overflow-hidden">
-                <div class="feature-image md:absolute left-0 top-0 w-full h-full">
-                  <img src="assets/images/team/member-1.png" width="600" height="420" alt="member image">
-                </div>
-                <div class="overlay-content text-xl md:text-lg uppercase">
-                  <h3>Alex R</h3>
-                  <p>
-                    Specializes in local and national SEO planning, keyword targeting, and performance tracking.
-                  </p>
-                  <a href="#" class="blur-btn">SEO Strategist</a>
-                </div>
-              </div>
-            </div><!--member-card-->
             <!--member-card-->
             <div class="member-item w-full md:w-[50%] md:px-[0.5rem] mb-[1rem]" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease" data-aos-delay="200">
               <div class="member-content md:min-h-[28.25rem] relative overflow-hidden">
@@ -461,47 +620,47 @@
     </main> <!-- page main content-->
 
     <!---------Footer---------->
-
     <footer class="pt-20 md:pt-30 px-4">
-
       <div class="max-w-[82rem] mx-auto">
-
-        <div class="w-full h-auto [&_img]:w-full md:px-2" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
+        <div class="w-full sm:w-[40%] h-auto [&_img]:w-full md:px-2" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease" data-aos-delay="200">
           <img src="assets/images/Ranking-Factor-Logo.png" alt="Ranking Factor Logo">
         </div>
 
         <!-----Footer navigation----->
-        <div class="flex flex-col md:flex-row justify-between  md:items-start gap-8 py-20 md:py-30" data-aos="fade-up"  data-aos-duration="1500"  data-aos-easing="ease" data-aos-delay="200" >
+        <div class="flex flex-col md:flex-row justify-between  md:items-start gap-8 py-20 md:py-26" data-aos="fade-up"  data-aos-duration="1500"  data-aos-easing="ease" data-aos-delay="200" >
           <!-- Navigation Links -->
           <div class="flex flex-col gap-8 footer-navigation w-full md:w-[56%] md:ps-3 md:pe-3">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Who We Help</a></li>
-              <li><a href="#">SEO Solution</a></li>
-              <li><a href="#">Who We Are</a></li>
-              <li><a href="#">Insights</a></li>
-              <li><a href="#">Get Started</a></li>
+              <li><a href="javascript:void(0);">Home</a></li>
+              <li><a href="javascript:void(0);">Who We Help</a></li>
+              <li><a href="javascript:void(0);">SEO Solution</a></li>
+              <li><a href="javascript:void(0);">Who We Are</a></li>
+              <li><a href="javascript:void(0);">Insights</a></li>
+              <li><a href="javascript:void(0);">Get Started</a></li>
             </ul>
           </div>
           <!-- Contact Details -->
           <div class="flex contact-info w-full md:w-[44%] md:pe-3">
             <div class="flex flex-col gap-5 md:gap-10 md:ml-auto">
-              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_span]:me-2 uppercase text-white">
-                <span>[Email]</span>
+              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_.icon]:me-2 uppercase text-white">
+                <div class="icon">
+                  <i class="fa fa-envelope"></i>
+                </div>
                 <a href="mailto:sales@rankingfactormarketing.com">sales@rankingfactormarketing.com</a>
               </div>
 
-              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_span]:me-2 uppercase text-white">
-                <span>[Phone]</span>
+              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_.icon]:me-2 uppercase text-white">
+                <div class="icon">
+                  <i class="fa fa-phone"></i>
+                </div>
                 <a href="tel:+13074790517">1 307 479 0517</a>
               </div>
 
-              <div class="flex gap-2 items-center text-base md:text-sm font-light [&_a]:text-3xl [&_a]:font-bold [&_span]:me-2 uppercase text-white">
-                <span>[Social]</span>
-                <div class="flex flex-wrap gap 4 md:gap-11">
-                  <a href="#" class="f-contact heading">Facebook</a>
-                  <a href="#" class="f-contact heading">LinkedIn</a>
-                  <a href="#" class="f-contact heading">Instagram</a>
+              <div class="social-links flex items-center font-light [&_a]:font-bold uppercase text-white">
+                <div class="flex flex-wrap gap-4 md:gap-5">
+                  <a href="javascript:void(0);" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="javascript:void(0);" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="javascript:void(0);" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -513,7 +672,6 @@
         </div>
 
       </div>
-
     </footer>
     <!---------Footer---------->
 
